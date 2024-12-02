@@ -1,16 +1,31 @@
+#' Licensing Markdown
+#'
+#' A string of markdown code indicating the licensing of the code
+#' and documentation
+#'
+#' @export
+#'
+#' @examples
+#' licensing_md()
 licensing_md <- function() {
-  "## Licensing
-  
-  Enter liscencing information in the licensing.R file within the licensing_md()
-  reference software dev book license section. 
+'## Licensing
+Copyright (c) 2024 Poisson Consulting
 
-For example:  
-  Copyright XXXX The Entity\\
-  
-  The documentation is released under the
-  XXXX
-  
-  The code is released under the
-  XXXX
-"
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.'
 }
