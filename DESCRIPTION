@@ -1,14 +1,27 @@
 Package: intro2jags
-Title: What the Package Does (One Line, Title Case)
+Title: Introduction to Coding Bayesian Models Course Package
 Version: 0.0.0.9000
 Authors@R: 
     person("Nicole", "Hill", , "nicole@poissonconsulting.ca", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-7623-2153"))
-Description: What the package does (one paragraph).
+Description: Loads useful packages, datasets, and functions for the CMI Introduction to Coding Bayesian Models Course.
 License: MIT + file LICENSE
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+URL: https://poissonconsulting.github.io/intro2jags/,
+    https://github.com/poissonconsulting/intro2jags
+BugReports: https://github.com/poissonconsulting/intro2jags/issues
+Imports:
+    dplyr,
+    ggplot2,
+    palmerpenguins,
+    readxl,
+    tibble,
+    tidyr
 Suggests: 
+    rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Encoding: UTF-8
+Language: en-US
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+VignetteBuilder: knitr
