@@ -4,7 +4,8 @@ Version: 0.0.0.9000
 Authors@R: 
     person("Nicole", "Hill", , "nicole@poissonconsulting.ca", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-7623-2153"))
-Description: Loads useful packages, datasets, and functions for the CMI Introduction to Coding Bayesian Models Course.
+Description: Loads useful packages, datasets, and functions for the CMI 
+    Introduction to Coding Bayesian Models Course.
 License: MIT + file LICENSE
 URL: https://poissonconsulting.github.io/intro2jags/,
     https://github.com/poissonconsulting/intro2jags
