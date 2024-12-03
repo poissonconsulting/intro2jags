@@ -1,7 +1,7 @@
 #' Use Analysis Template
 #' 
-#' Creates a templated R file in the root directory. The name of the file takes 
-#' the value of the `analysis` argument.
+#' Creates a templated R file in the root directory of the project. The name of 
+#' the file takes the value of the `analysis` argument.
 #'
 #' @inheritParams params
 #' @export
