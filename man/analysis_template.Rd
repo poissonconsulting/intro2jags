@@ -12,8 +12,8 @@ analysis_template(analysis, open = rlang::is_interactive())
 \item{open}{Whether or not to open the script interactively; defaults to value returned by \code{rlang::is_interactive}.}
 }
 \description{
-Creates a templated R file in the root directory. The name of the file takes
-the value of the \code{analysis} argument.
+Creates a templated R file in the root directory of the project. The name of
+the file takes the value of the \code{analysis} argument.
 }
 \examples{
 \dontrun{
