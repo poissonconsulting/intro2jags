@@ -35,7 +35,7 @@ penguins
 ### Create templated analysis script
 
 ```{r, eval = FALSE}
-# Call this function with the name of the analysis to create a templated 
+# Call this function with the name of the analysis to create a templated
 # analysis file
 # E.g., the following line of code will create a templated "abundance.R" file
 # in the root directory.

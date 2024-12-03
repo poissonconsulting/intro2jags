@@ -2,7 +2,8 @@ roxygen2md::roxygen2md()
 
 styler::style_pkg(
   scope = "line_breaks",
-  filetype = c("R", "Rmd")
+  filetype = c("R", "Rmd"),
+  exclude_files = c("_snaps/analysis-template/abundance.R$")
 )
 
 lintr::lint_package(linters = linters_with_defaults(

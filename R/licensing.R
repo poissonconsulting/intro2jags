@@ -8,7 +8,7 @@
 #' @examples
 #' licensing_md()
 licensing_md <- function() {
-'## Licensing
+  '## Licensing
 Copyright (c) 2024 Poisson Consulting
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
