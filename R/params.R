@@ -8,6 +8,8 @@
 #' A string is a non-missing character scalar.
 #
 #' @inheritParams rlang::args_dots_empty
+#' @param analysis A string of name of the analysis.
+#' @param open Whether or not to open the script interactively; defaults to value returned by `rlang::is_interactive`.
 #' @keywords internal
 #' @aliases parameters arguments args
 #' @usage NULL

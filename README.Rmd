@@ -4,19 +4,44 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of intro2jags is to ...
+The goal of intro2jags is to load necessary packages and useful functions and datasets for the CMI Introduction to Coding Bayesian Models Course.
 
 ## Installation
 
+To install the latest development version of intro2jags:
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-library(intro2jags)
-## basic example code
+```{r, eval = FALSE}
+install.packages("remotes")
+remotes::install_github("poissonconsulting/intro2jags")
 ```
+
+And to load the package into the current R session:
+
+```{r}
+library(intro2jags)
+```
+
+## Example Usage
+
+### Datasets Automatically Loaded
+
+After loading the package, the datasets are available simply by calling them.
+
+``` {r}
+# e.g., the palmerpenguins `penguins` dataset
+penguins
+```
+
+### Create templated analysis script
+
+```{r, eval = FALSE}
+# Call this function with the name of the analysis to create a templated 
+# analysis file
+# E.g., the following line of code will create a templated "abundance.R" file
+# in the root directory.
+analysis_template("abundance")
+```
+
 
 ```{r, results = "asis", echo = FALSE}
 cat(licensing_md())

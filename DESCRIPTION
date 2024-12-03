@@ -10,18 +10,19 @@ URL: https://poissonconsulting.github.io/intro2jags/,
     https://github.com/poissonconsulting/intro2jags
 BugReports: https://github.com/poissonconsulting/intro2jags/issues
 Imports:
-    dplyr,
-    ggplot2,
-    palmerpenguins,
-    readxl,
-    tibble,
-    tidyr
+    glue,
+    rlang,
+    stringr,
+    usethis
 Suggests: 
+    palmerpenguins,
     rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Encoding: UTF-8
-Language: en-US
+Language: en-CA
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
-VignetteBuilder: knitr
+Depends: 
+    R (>= 3.5)
+LazyData: true
