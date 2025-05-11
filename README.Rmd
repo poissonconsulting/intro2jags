@@ -49,6 +49,7 @@ data(penguins)
 ```
 
 Currently, the package has 3 datasets:
+
   1. `penguins`
   2. `climate`
   3. `starfish`

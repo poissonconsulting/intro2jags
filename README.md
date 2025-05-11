@@ -38,8 +38,11 @@ environment by using the `data()` function.
 data(penguins)
 ```
 
-Currently, the package has 3 datasets: 1. `penguins` 2. `climate` 3.
-`starfish`
+Currently, the package has 3 datasets:
+
+1.  `penguins`
+2.  `climate`
+3.  `starfish`
 
 ## Licensing
 
