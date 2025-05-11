@@ -9,10 +9,7 @@ styler::style_pkg(
 lintr::lint_package(linters = lintr::linters_with_defaults(
   line_length_linter = lintr::line_length_linter(1000),
   object_name_linter = lintr::object_name_linter(regexes = ".*")),
-  exclusions = c(
-    "inst/templates/analysis.R",
-    "tests/testthat/_snaps/analysis-template/abundance.R"
-  )
+  # exclusions = c()
 )
 
 devtools::test()
