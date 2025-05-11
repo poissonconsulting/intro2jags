@@ -8,7 +8,7 @@ pkg_attach <- function(pkg) {
 
 pkgs_attach <- function(pkgs, name) {
   msg(name, ": ", paste(pkgs, collapse = " "))
-  
+
   suppressPackageStartupMessages(
     lapply(pkgs, pkg_attach)
   )
@@ -17,6 +17,6 @@ pkgs_attach <- function(pkgs, name) {
 
 pkg_list_attach <- function(pkg_list) {
   msg("Attaching intro2jags packages")
-  
+
   mapply(pkgs_attach, pkg_list, names(pkg_list))
 }
