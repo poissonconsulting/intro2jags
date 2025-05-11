@@ -1,16 +1,14 @@
 # {{{ analysis }}}
-# {{{ date }}}
 
 # Clear environment ------------------------------------------------------------
 rm(list = ls())
 
 # Install and load course package ----------------------------------------------
-if (!requireNamespace(jagscourse)) {
-  install.packages("remotes")
-  remotes::install_github("poissonconsulting/jagscourse")
+if (!requireNamespace("intro2jags")) {
+  remotes::install_github("poissonconsulting/intro2jags")
 }
 
-library(jagscourse24)
+library(intro2jags)
 
 # Load data --------------------------------------------------------------------
 
@@ -19,16 +17,19 @@ library(jagscourse24)
 # Prepare data for JAGS --------------------------------------------------------
 # TODO: numericize??/get nObs etc.?
 data <- list(
+  nObs <- nrow(data),
   
 )
 
 # Code model -------------------------------------------------------------------
-sink("mod.txt")
+sink("model.txt")
 cat("model{
   # Priors
 
   # Likelihood
-  for (i in 1:nObs)
+  for (i in 1:nObs) {
+    
+  }
 }")
 sink()
 
@@ -60,7 +61,10 @@ mod1 <- jagsUI::jags(
   n.burnin = nb
 )
 
-# Summarize posteriors and evaluate convergence --------------------------------
+# Save model object
+saveRDS(mod1, file = "")
+
+# Evaluate convergence --------------------------------
 print(mod1, digits = 3)
 
 # Make predictions -------------------------------------------------------------
