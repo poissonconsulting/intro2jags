@@ -1,5 +1,5 @@
 msg <- function(...) {
-  if (!isTRUE(getOption("poispkgs.quiet"))) {
+  if (!isTRUE(getOption("intro2jags.quiet"))) {
     packageStartupMessage(...)
   }
 }

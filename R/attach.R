@@ -16,7 +16,7 @@ pkgs_attach <- function(pkgs, name) {
 }
 
 pkg_list_attach <- function(pkg_list) {
-  msg("Attaching poispkgs")
+  msg("Attaching intro2jags packages")
   
   mapply(pkgs_attach, pkg_list, names(pkg_list))
 }

@@ -1,7 +1,4 @@
 ## code to prepare `starfish` dataset goes here
-
-library(poispkgs) 
-
 bIntercept <- 1
 bTemp <- -0.04
 bSite <- c(0, -0.3, 0.5)
@@ -19,7 +16,7 @@ bYear <- rnorm(nyear, 0, sYear)
 bYearSite <- matrix(rnorm(nsite * nyear, 0, sYearSite), nrow = nyear, ncol = nsite)
 temp <- rnorm(nObs, mean = 12, sd = 2)       # Temperature varies per obs
 # area <- runif(nObs, min = 0.5, max = 1.5)  # Area sampled per obs
-area <- rep(1, nObs)
+# area <- rep(1, nObs)
 site <- rep(1:nsite, each = nyear * npersiteyear)       # Site ID
 site_names <- c("Site A", "Site B", "Site C")
 
@@ -59,14 +56,14 @@ hist(count)
 starfish <- tibble::tibble(
   count = count,
   temp = temp,
-  area = area,
+  # area = area,
   site = factor(site_names[site]),
   year = factor(2010 + year)
 )
 
 usethis::use_data(starfish, overwrite = TRUE)
 
-if (TRUE) {
+if (FALSE) {
   # TEST model
   model <- mbr::model(
     code = "model{

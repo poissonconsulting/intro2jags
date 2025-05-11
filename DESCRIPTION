@@ -16,14 +16,12 @@ Imports:
     dplyr,
     extras,
     ggplot2,
-    glue,
+    jagsUI,
     magrittr,
     MCMCvis,
-    rlang,
     stringr,
     tibble,
-    tidyr,
-    usethis
+    tidyr
 Suggests: 
     palmerpenguins,
     rmarkdown,

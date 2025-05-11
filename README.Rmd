@@ -33,6 +33,7 @@ remotes::install_github("poissonconsulting/intro2jags")
 And to load the package into the current R session:
 
 ```{r}
+# This will load several helpful packages into R.
 library(intro2jags)
 ```
 
@@ -40,23 +41,17 @@ library(intro2jags)
 
 ### Datasets Automatically Loaded
 
-After loading the package, the datasets are available simply by calling them.
+After loading the package, the datasets can be loaded into the environment by using the `data()` function.
 
 ``` {r}
-# e.g., the palmerpenguins `penguins` dataset
-penguins
+# e.g., the `penguins` dataset
+data(penguins)
 ```
 
-### Create templated analysis script
-
-```{r, eval = FALSE}
-# Call this function with the name of the analysis to create a templated
-# analysis file
-# E.g., the following line of code will create a templated "abundance.R" file
-# in the root directory.
-analysis_template("abundance")
-```
-
+Currently, the package has 3 datasets:
+  1. `penguins`
+  2. `climate`
+  3. `starfish`
 
 ```{r, results = "asis", echo = FALSE}
 cat(licensing_md())
