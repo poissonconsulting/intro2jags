@@ -6,10 +6,11 @@ n <- 100
 elevation <- runif(n, min = 0, max = 3000) # Elevation (meters)
 latitude <- runif(n, min = 25, max = 65) # Latitude (degrees North)
 # True parameter values
-beta0 <- 1.2 # Intercept
-beta1 <- -0.003 # Elevation effect (higher elevations = cooler temperatures)
-beta2 <- -0.12 # Latitude effect (higher latitudes = cooler temperatures)
-sigma <- 1.8 # Residual SD
+beta0 <- 6      # Higher intercept
+beta1 <- -0.002 # Elevation effect
+beta2 <- -0.06  # Latitude effect
+sigma <- 2.8    # More noise for wider spread
+
 # Simulate temperature anomalies (can be positive or negative)
 # Positive = warmer than baseline, Negative = cooler than baseline
 temp_anomaly <- beta0 + beta1 * elevation + beta2 * latitude + rnorm(n, 0, sigma)
