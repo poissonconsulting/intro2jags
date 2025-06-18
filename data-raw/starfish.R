@@ -1,4 +1,7 @@
 ## code to prepare `starfish` dataset goes here
+library(embr)
+library(jmbr)
+
 bIntercept <- 1
 bTemp <- -0.04
 bSite <- c(0, -0.3, 0.5)
@@ -64,7 +67,7 @@ usethis::use_data(starfish, overwrite = TRUE)
 
 if (FALSE) {
   # TEST model
-  model <- mbr::model(
+  model <- embr::model(
     code = "model{
   bIntercept ~ dnorm(0, 4^-2)
   bTemp ~ dnorm(0, 2^-2)
@@ -106,7 +109,6 @@ if (FALSE) {
       temp = c(-5, 30),
       site = factor(),
       year = factor(),
-      area = c(0, 10),
       count = c(0L, 1000L)
     ),
     random_effects = list(

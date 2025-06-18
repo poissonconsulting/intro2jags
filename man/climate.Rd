@@ -18,6 +18,8 @@ climate
 \description{
 Includes temperature anomalies from 100 sites, with measurements of the
 elevation and latitude for each observation.
+}
+\details{
 This is a simulated dataset.
 }
 \keyword{datasets}
