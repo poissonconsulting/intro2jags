@@ -3,6 +3,7 @@
 #' Includes seed germination as a binary response variable, with other 
 #' measurements.
 #'
+#'
 #' This is a simulated dataset.
 #'
 #' @format A tibble with 4,022 rows and 9 variables:
@@ -16,7 +17,8 @@
 #'   Silty, Clay, Peaty)}
 #'   \item{germinated}{an integer denoting whether (1) or not (0) the seed 
 #'   successfully germinated}
-#'   \item{depth}{distance between top of soil and where seed was placed, in cm}
+#'   \item{seed_depth}{distance between top of soil and where seed was placed,
+#'   in cm}
 #'   \item{planting_time}{the hour of the day that the seed was planted}
 #' }
 "seeds"
