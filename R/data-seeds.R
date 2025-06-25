@@ -16,7 +16,7 @@
 #'   Silty, Clay, Peaty)}
 #'   \item{germinated}{an integer denoting whether (1) or not (0) the seed 
 #'   successfully germinated}
-#'   \item{ph}{the pH of the soil}
+#'   \item{depth}{distance between top of soil and where seed was placed, in cm}
 #'   \item{planting_time}{the hour of the day that the seed was planted}
 #' }
 "seeds"

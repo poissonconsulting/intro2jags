@@ -49,7 +49,7 @@ seed_data <- data.frame(
   germinated = germinated
 )
 
-seed_data$ph <- rnorm(nrow(seed_data), mean = 6.5, sd = 0.5)
+seed_data$seed_depth <- runif(nrow(seed_data), 4, 8)
 seed_data$planting_time <- sample(8:16, nrow(seed_data), replace = TRUE)  # e.g. 8am–4pm
 
 # Save data
@@ -166,7 +166,7 @@ if (TRUE) {
       germinated = sum(germinated), # number of sucesses (response)
       # Average continuous parameters across groups
       seed_mass = mean(seed_mass), 
-      ph = mean(ph)
+      seed_depth = mean(seed_depth)
     ) %>% 
     # Remove individual tray cell factor covariates
     select(-soil_type, -planting_time, -watering_freq) %>% 
