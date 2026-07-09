@@ -16,7 +16,11 @@ nObs <- nsite * nyear * npersiteyear # 10 obs at each site in each year
 set.seed(123)
 
 bYear <- rnorm(nyear, 0, sYear)
-bYearSite <- matrix(rnorm(nsite * nyear, 0, sYearSite), nrow = nyear, ncol = nsite)
+bYearSite <- matrix(
+  rnorm(nsite * nyear, 0, sYearSite),
+  nrow = nyear,
+  ncol = nsite
+)
 temp <- rnorm(nObs, mean = 12, sd = 2) # Temperature varies per obs
 site <- rep(1:nsite, each = nyear * npersiteyear) # Site ID
 site_names <- c("Site A", "Site B", "Site C")
@@ -25,22 +29,65 @@ year <- rep(1:nyear, times = nsite * npersiteyear) # Year ID
 
 initial_values <- tibble(
   term = c(
-    "bYear[1]", "bYear[2]", "bYear[3]", "bYear[4]",
-    "bYear[5]", "bYear[6]", "bYear[7]", "bYear[8]", "bYear[9]",
-    "bYear[10]", "bIntercept", "bSite[1]", "bSite[2]", "bSite[3]",
-    "bYearSite[1,1]", "bYearSite[2,1]", "bYearSite[3,1]",
-    "bYearSite[4,1]", "bYearSite[5,1]", "bYearSite[6,1]",
-    "bYearSite[7,1]", "bYearSite[8,1]", "bYearSite[9,1]",
-    "bYearSite[10,1]", "bYearSite[1,2]", "bYearSite[2,2]",
-    "bYearSite[3,2]", "bYearSite[4,2]", "bYearSite[5,2]",
-    "bYearSite[6,2]", "bYearSite[7,2]", "bYearSite[8,2]",
-    "bYearSite[9,2]", "bYearSite[10,2]", "bYearSite[1,3]",
-    "bYearSite[2,3]", "bYearSite[3,3]", "bYearSite[4,3]",
-    "bYearSite[5,3]", "bYearSite[6,3]", "bYearSite[7,3]",
-    "bYearSite[8,3]", "bYearSite[9,3]", "bYearSite[10,3]",
-    "bTemp", "sYear", "sYearSite", "sDispersion"
+    "bYear[1]",
+    "bYear[2]",
+    "bYear[3]",
+    "bYear[4]",
+    "bYear[5]",
+    "bYear[6]",
+    "bYear[7]",
+    "bYear[8]",
+    "bYear[9]",
+    "bYear[10]",
+    "bIntercept",
+    "bSite[1]",
+    "bSite[2]",
+    "bSite[3]",
+    "bYearSite[1,1]",
+    "bYearSite[2,1]",
+    "bYearSite[3,1]",
+    "bYearSite[4,1]",
+    "bYearSite[5,1]",
+    "bYearSite[6,1]",
+    "bYearSite[7,1]",
+    "bYearSite[8,1]",
+    "bYearSite[9,1]",
+    "bYearSite[10,1]",
+    "bYearSite[1,2]",
+    "bYearSite[2,2]",
+    "bYearSite[3,2]",
+    "bYearSite[4,2]",
+    "bYearSite[5,2]",
+    "bYearSite[6,2]",
+    "bYearSite[7,2]",
+    "bYearSite[8,2]",
+    "bYearSite[9,2]",
+    "bYearSite[10,2]",
+    "bYearSite[1,3]",
+    "bYearSite[2,3]",
+    "bYearSite[3,3]",
+    "bYearSite[4,3]",
+    "bYearSite[5,3]",
+    "bYearSite[6,3]",
+    "bYearSite[7,3]",
+    "bYearSite[8,3]",
+    "bYearSite[9,3]",
+    "bYearSite[10,3]",
+    "bTemp",
+    "sYear",
+    "sYearSite",
+    "sDispersion"
   ),
-  value = c(bYear, bIntercept, bSite, bYearSite, bTemp, sYear, sYearSite, sDispersion)
+  value = c(
+    bYear,
+    bIntercept,
+    bSite,
+    bYearSite,
+    bTemp,
+    sYear,
+    sYearSite,
+    sDispersion
+  )
 )
 
 # Linear predictor and simulation
@@ -127,7 +174,11 @@ if (FALSE) {
   # Preds vs data generating values
   gp <- ggplot(coef) +
     geom_pointrange(aes(x = term, y = estimate, ymin = lower, ymax = upper)) +
-    geom_point(data = initial_values, aes(x = term, y = value), colour = "red") +
+    geom_point(
+      data = initial_values,
+      aes(x = term, y = value),
+      colour = "red"
+    ) +
     guides(x = guide_axis(angle = 90))
 
   sbf_open_window()
@@ -185,7 +236,6 @@ if (FALSE) {
   sbf_open_window(3)
   sbf_print(gp)
 
-
   # Residuals
   data <- starfish
   data$residual <- residuals(analysis)$estimate
@@ -226,7 +276,6 @@ if (FALSE) {
 
   sbf_open_window(4, 3)
   sbf_print(gp)
-
 
   sbf_open_window(4, 3)
   sbf_print(gp)
